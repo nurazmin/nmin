@@ -65,7 +65,33 @@
 <body>
     <div class="signup-box">
         <h2>Sign Up</h2>
-        <form action="https://nurazmin.github.io/nmin/index.html" method="post">
+        <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign Up - Your Website</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://nurazmin.github.io/nmin/style.css"> <!-- Include your existing style.css -->
+    <style>
+        /* Your existing styles remain unchanged */
+    </style>
+    <script>
+        function submitForm() {
+            // Perform any additional validation or processing if needed
+            // For simplicity, we are just redirecting to the specified URL
+            window.location.href = 'https://nurazmin.github.io/nmin/index.html';
+        }
+
+        function resetForm() {
+            document.getElementById("signup-form").reset();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="signin-box">
+        <h2>Sign Up</h2>
+        <form id="signup-form" action="javascript:void(0);" onsubmit="submitForm()">
             <input type="text" placeholder="First Name" name="firstName" required>
             <input type="text" placeholder="Last Name" name="lastName" required>
             <select name="gender" required>
@@ -77,8 +103,13 @@
             <input type="password" placeholder="Password" name="password" required>
             <input type="password" placeholder="Re-Enter Password" name="repassword" required>
             <button type="submit">Sign Up</button>
-            <button type="reset">Reset</button>
+            <button type="button" onclick="resetForm()">Reset</button>
         </form>
+    </div>
+</body>
+
+</html>
+
         <a href="https://nurazmin.github.io/nmin/signinpage.html" class="signin-link">Sign In</a>
     </div>
 </body>
