@@ -64,16 +64,40 @@
 </head>
 
 <body>
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign In - Your Website</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://nurazmin.github.io/nmin/style.css"> <!-- Include your existing style.css -->
+    <style>
+        /* Your existing styles remain unchanged */
+    </style>
+    <script>
+        function resetForm() {
+            document.getElementById("signin-form").reset();
+        }
+    </script>
+</head>
+
+<body>
     <div class="signin-box">
         <h2>Sign In</h2>
-        <input type="text" placeholder="Username" name="username" required>
-        <input type="password" placeholder="Password" name="password" required>
-        <button type="submit" onclick="window.location.href='https://nurazmin.github.io/nmin/index.html';">Sign In</button>
-        <button type="reset">Reset</button>
-        <button type="button" class="signup-button" onclick="window.location.href='https://nurazmin.github.io/nmin/signuppage.html';">Sign Up</button>
+        <form id="signin-form" action="https://nurazmin.github.io/nmin/index.html" method="post">
+            <input type="text" placeholder="Username" name="username" required>
+            <input type="password" placeholder="Password" name="password" required>
+            <button type="submit">Sign In</button>
+            <button type="button" onclick="resetForm()">Reset</button>
+            <button type="button" class="signup-button" onclick="window.location.href='https://nurazmin.github.io/nmin/signuppage.html';">Sign Up</button>
+        </form>
         <!-- Inside the Sign In page -->
         <a href="https://nurazmin.github.io/nmin/signuppage.html" class="signup-link">Sign up</a>
     </div>
+</body>
+
+</html>
+
 </body>
 
 </html>
