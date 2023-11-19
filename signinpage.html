@@ -6,75 +6,14 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://nurazmin.github.io/nmin/style.css"> <!-- Include your existing style.css -->
     <style>
-        body {
-            background-color: #ffe6e6;
-            font-family: "Comic Sans MS", cursive, sans-serif;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        .signin-box {
-            max-width: 400px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .signin-box h2 {
-            font-weight: bold;
-            color: #cc0044;
-        }
-
-        .signin-box input {
-            width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            box-sizing: border-box;
-        }
-
-        .signin-box button {
-            background-color: #cc0044;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .signin-box button:hover {
-            background-color: #ff1a8c;
-        }
-
-        .signup-link {
-            color: #cc0044;
-            text-decoration: none;
-            margin-top: 10px;
-            display: inline-block;
-        }
-
-        .signup-link:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-
-<body>
-  <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>Sign In - Your Website</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://nurazmin.github.io/nmin/style.css"> <!-- Include your existing style.css -->
-    <style>
         /* Your existing styles remain unchanged */
     </style>
     <script>
+        function signIn() {
+
+            window.location.href = 'https://nurazmin.github.io/nmin/index.html';
+        }
+
         function resetForm() {
             document.getElementById("signin-form").reset();
         }
@@ -84,7 +23,7 @@
 <body>
     <div class="signin-box">
         <h2>Sign In</h2>
-        <form id="signin-form" action="https://nurazmin.github.io/nmin/index.html" method="post">
+        <form id="signin-form" action="javascript:void(0);" onsubmit="signIn()">
             <input type="text" placeholder="Username" name="username" required>
             <input type="password" placeholder="Password" name="password" required>
             <button type="submit">Sign In</button>
@@ -94,10 +33,6 @@
         <!-- Inside the Sign In page -->
         <a href="https://nurazmin.github.io/nmin/signuppage.html" class="signup-link">Sign up</a>
     </div>
-</body>
-
-</html>
-
 </body>
 
 </html>
